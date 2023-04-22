@@ -69,8 +69,12 @@ const stepThroughCell = (row, column) =>{
         [row, column-1]
     ]);
 
-    console.log(neighbours);
-}
+    for(let neighbour of neighbours){
+        const[nextRow, nextColumn] = neighbour;
+
+    }
+
+};
 
 stepThroughCell(1, 1);
 
