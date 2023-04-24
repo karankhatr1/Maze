@@ -1,6 +1,6 @@
-const { Engine, Render, Runner, World, Bodies, Body } = Matter;
+const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
 
-const cells = 25;
+const cells = 3;
 const width = 600;
 const height = 600;
 const unitLength = height/cells;
@@ -170,4 +170,12 @@ document.addEventListener("keydown", event => {
     if(event.keyCode === 65) {
         Body.setVelocity(ball, {x : x - 5, y});
     }
+});
+
+Events.on(engine, "collisionStart", event =>{
+    event.pairs.forEach((collision) =>{
+       const labels = ["ball", "goal"];
+
+       if()
+    });
 });
